@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
     return p.concat(c);
   });
 
-  var max = Math.max.apply(null, arr); // 9
-  var min = Math.min.apply(null, arr); // 1
+  var max = Math.max.apply(null, arr);
+  var min = Math.min.apply(null, arr);
 
   google.charts.load("current", {packages:["calendar"]});
   google.charts.setOnLoadCallback(drawChart);
@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
     var chart = new google.visualization.Calendar(document.getElementById('calendar_basic'));
 
-    console.log($(window).width());
     var options = {
       title: data[0].breakdown1 + " - " + headers.metrics[0],
       width: $(window).width(),
