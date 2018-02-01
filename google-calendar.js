@@ -25,7 +25,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
     dd = parseInt(res[1]);
     mm = parseInt(res[0]) - 1;
     yy = parseInt(res[2].slice(0, +4));
-    obj.push([new Date(yy, mm, dd), data[i].metrics[0]]);
+    n = parseFloat(data[i].metrics[0]);
+    obj.push([new Date(yy, mm, dd), n]);
   }
 
   var arr = obj.reduce(function (p, c) {
